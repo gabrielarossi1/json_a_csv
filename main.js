@@ -15,7 +15,8 @@ function convertJSONtoCSV(){
         json = JSON.parse(jsonForm.value);
     }catch (error){
         console.log('Formato incorrecto JSON', error);
-        alert("Formato incorresto JSON");
+        alert("Formato incorrecto JSON");
+        return;
     }
 
     if(Array.isArray(json)){
@@ -45,3 +46,17 @@ function convertJSONtoCSV(){
         alert("No es un arreglo de objetos")
     }
 }
+
+//ejemplo json para probar:
+// [
+//     {
+//         "id": 0,
+//         "nombre": "Marcos", 
+//         "edad": 29
+//     },
+//     {
+//         "id": 1,
+//         "nombre": "Laura",
+//         "edad": 35
+//     }
+// ]
